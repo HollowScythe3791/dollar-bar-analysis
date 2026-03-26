@@ -1,4 +1,4 @@
-# dollar-bar-analysis
+# Financial Market Data Sampling Analysis
 
 Replicating López de Prado's dollar bar claims with independent analysis. Statistical tests for normality, independence, and stability across four bar types using 59M BTC ticks.
 
@@ -43,6 +43,8 @@ Thresholds were chosen to produce a comparable number of bars across all four me
 
 The dataset comes from [Kraken Time and Sales data](https://support.kraken.com/hc/en-us/articles/360047124832-Downloadable-historical-OHLCVT-Open-High-Low-Close-Volume-Trades-data), which is freely available for download. We use **BTC-USD** trades from **January 1, 2020 to January 1, 2025** (~59 million ticks).
 
+I also included a link to a google drive with the exact dataset used in this experiment. A link to the drive can be found in the README.md inside data/.
+
 Each tick contains:
 
 | Field | Description |
@@ -57,13 +59,24 @@ Each tick contains:
 
 '''
 dollar-bar-analysis/
-├── notebook.ipynb          # Full analysis walkthrough
-├── utils/
-│   ├── aggregation.py      # Functions to build time, tick, volume, and dollar bars
-│   ├── tests.py            # Statistical testing functions (Shapiro-Wilk, Ljung-Box, ADF, etc.)
-│   └── plotting.py         # Visualization helpers (histograms, QQ-plots, ACF, rolling plots)
-├── requirements.txt        # Python dependencies
-└── README.md
+├── README.md
+├── requirements.txt
+├── LICENSE (MIT)
+│
+├── notebooks/
+│   └── check_your_bars.ipynb    # The article itself
+│
+├── src/
+│   ├── __init__.py
+│   ├── bars.py                  # Bar construction functions
+│   ├── statistics.py            # Test wrappers (Shapiro, Ljung-Box, ADF, etc.)
+│   └── visualization.py         # Plotting functions
+│
+├── data/
+│   └── README.md                # Instructions for downloading Kraken data
+│
+└── results/
+    └── figures/                 # Exported plots
 '''
 
 ## Getting Started
