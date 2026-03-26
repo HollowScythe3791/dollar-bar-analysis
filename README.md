@@ -4,7 +4,7 @@ Replicating López de Prado's dollar bar claims with independent analysis. Stati
 
 ## Overview
 
-This repository accompanies the article **"Check Your Bars — Testing Normality, Independence, and Stability on Time, Tick, Volume, and Dollar Bars"**.
+This repository accompanies the article [**"Check Your Bars — Testing Normality, Independence, and Stability on Time, Tick, Volume, and Dollar Bars"**](https://medium.com/@silasquantresearch/check-your-bars-testing-normality-independence-and-stability-on-time-tick-volume-and-dollar-a242fc1f31bc).
 
 Many quantitative finance models assume that returns data is normally distributed, independent, and stable over time. If those assumptions are violated, models can produce incorrect signals, underestimate risk, and lead to overfit strategies. This project tests how the method used to aggregate raw tick data into bars affects these statistical properties.
 
