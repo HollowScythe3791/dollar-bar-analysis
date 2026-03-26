@@ -57,7 +57,7 @@ Each tick contains:
 
 ## Project Structure
 
-'''
+```
 dollar-bar-analysis/
 ├── README.md
 ├── requirements.txt
@@ -77,7 +77,7 @@ dollar-bar-analysis/
 │
 └── results/
     └── figures/                 # Exported plots
-'''
+```
 
 ## Getting Started
 
@@ -88,20 +88,20 @@ dollar-bar-analysis/
 
 ### Installation
 
-'''bash
+```bash
 git clone https://github.com/YOUR_USERNAME/dollar-bar-analysis.git
 cd dollar-bar-analysis
 pip install -r requirements.txt
-'''
+```
 
 ### Running the Analysis
 
 1. Download the BTC-USD tick data from [Kraken](https://support.kraken.com/hc/en-us/articles/360047124832-Downloadable-historical-OHLCVT-Open-High-Low-Close-Volume-Trades-data) and place it in the project directory.
 2. Open the notebook:
 
-'''bash
+```bash
 jupyter notebook notebook.ipynb
-'''
+```
 
 3. Run all cells to reproduce the full analysis.
 
