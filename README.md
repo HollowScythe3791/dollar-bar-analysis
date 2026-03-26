@@ -89,7 +89,7 @@ dollar-bar-analysis/
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dollar-bar-analysis.git
+git clone https://github.com/HollowScythe3791/dollar-bar-analysis.git
 cd dollar-bar-analysis
 pip install -r requirements.txt
 ```
