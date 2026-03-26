@@ -43,7 +43,7 @@ Thresholds were chosen to produce a comparable number of bars across all four me
 
 The dataset comes from [Kraken Time and Sales data](https://support.kraken.com/hc/en-us/articles/360047124832-Downloadable-historical-OHLCVT-Open-High-Low-Close-Volume-Trades-data), which is freely available for download. We use **BTC-USD** trades from **January 1, 2020 to January 1, 2025** (~59 million ticks).
 
-I also included a link to a google drive with the exact dataset used in this experiment. A link to the drive can be found in the README.md inside data/.
+I also included a [link](https://drive.google.com/drive/folders/13LR2eRz-P_TDdpLl6U93df0uG4J7l8lG?usp=drive_link) to a google drive with the exact dataset used in this experiment. A link to the drive can be found in the README.md inside data/.
 
 Each tick contains:
 
@@ -53,7 +53,7 @@ Each tick contains:
 | `price` | Execution price |
 | `volume` | Quantity of BTC traded |
 
-> **Note:** The raw tick data is not included in this repository due to its size. Please download it directly from Kraken using the link above.
+> **Note:** The raw tick data is not included in this repository due to its size. Please download it directly from Kraken or the Google Drive using one of the links above.
 
 ## Project Structure
 
@@ -63,8 +63,7 @@ dollar-bar-analysis/
 ├── requirements.txt
 ├── LICENSE (MIT)
 │
-├── notebooks/
-│   └── check_your_bars.ipynb    # The article itself
+├── notebook.ipynb    # The article itself
 │
 ├── src/
 │   ├── __init__.py
@@ -91,12 +90,14 @@ dollar-bar-analysis/
 ```bash
 git clone https://github.com/HollowScythe3791/dollar-bar-analysis.git
 cd dollar-bar-analysis
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
 ### Running the Analysis
 
-1. Download the BTC-USD tick data from [Kraken](https://support.kraken.com/hc/en-us/articles/360047124832-Downloadable-historical-OHLCVT-Open-High-Low-Close-Volume-Trades-data) and place it in the project directory.
+1. Download the BTC-USD tick data from the [Drive](https://drive.google.com/drive/folders/13LR2eRz-P_TDdpLl6U93df0uG4J7l8lG?usp=drive_link) and place it in the data directory.
 2. Open the notebook:
 
 ```bash
@@ -111,10 +112,10 @@ jupyter notebook notebook.ipynb
 
 | Bar Type | W Statistic | Verdict |
 |---|---|---|
-| Time | 0.9235 | ❌ Reject |
-| Tick | 0.9771 | ❌ Reject |
-| Volume | 0.9821 | ❌ Reject |
-| **Dollar** | **0.9918** | ❌ Reject (closest to normal) |
+| Time | 0.9235 | Reject |
+| Tick | 0.9771 | Reject |
+| Volume | 0.9821 | Reject |
+| **Dollar** | **0.9918** | Reject (closest to normal) |
 
 ### Independence (Ljung-Box)
 
