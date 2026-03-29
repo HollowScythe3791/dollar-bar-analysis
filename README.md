@@ -135,13 +135,6 @@ jupyter notebook notebook.ipynb
 | Volume | ✓ | ✗ | 9.028 | 0.384 | ✗ | 2/5 |
 | **Dollar** | **✓** | ✗ | **5.415** | **0.344** | ✗ | **2/5** |
 
-## What's Next
-
-The instability that remains across all bar types — volatility clustering and structural breaks — cannot be solved by bar sampling alone. The next article will explore:
-
-- **Dynamic thresholds** for dollar bar construction instead of a static $100M
-- The **symmetric CUSUM filter** introduced by López de Prado
-- Comparing sampling methods *within* the dollar bar framework to further minimize instability
 
 ## References
 
